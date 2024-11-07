@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+/* Neon text with blink effect */
+.lead {
+  font-size: calc(15px + 4vh);
+  line-height: calc(15px + 6vh);
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 
+               0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  color: #fff6a9;
+  font-family: "Sacramento", cursive;
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+}
+
+/* Keyframes for blinking effect */
+@-webkit-keyframes blink {
+  20%, 24%, 55% {
+    color: #111;
+    text-shadow: none;
+  }
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 
+                 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
+@keyframes blink {
+  20%, 24%, 55% {
+    color: #111;
+    text-shadow: none;
+  }
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 
+                 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
+/* Additional styling for button controls if needed */
+.btn-controls {
+  position: absolute;
+  top: 50%;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  display: none;
+}
+
+.btn-controls button {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 0.4rem;
+  display: block;
+  z-index: 9;
+  text-align: center;
+  margin: 0 5px;
+  transition: all 0.3s ease-in-out;
+  background: rgba(var(--bs-primary-rgb), 0.3);
+  color: #fff;
+  border: none;
+  padding: 0;
+}
+
+.btn-controls button:hover {
+  background: rgba(var(--bs-primary-rgb), 1);
+}
+
+/* Hover effect to display button controls */
+.billbord-container:hover .btn-controls {
+  display: flex;
+}
+
+/* Background styling */
+.headerSection {
+  background-color: black;
+  background-image: url("/assets/images/Bk/flower2.jpg");
+}
+
+.artMart {
+  background-image: url("/assets/images/Bk/shopping.jpg");
+  height: 50vh;
+}
+
+.head1,
+.head2 {
+  font-family: cursive;
+  color: white;
+}
+
+
+/* CSS for glow effect */
+.glow-button {
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.4), 0 0 30px rgba(255, 165, 0, 0.3);
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.7), 0 0 25px rgba(255, 165, 0, 0.6), 0 0 35px rgba(255, 165, 0, 0.5);
+}
+
+
+
+/* Team Card Styling */
+.our-team {
+  padding: 30px 0 40px;
+  margin-bottom: 30px;
+  background-color: #f7f5ec;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Hover Effect */
+.our-team:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Picture Container */
+.our-team .picture {
+  display: inline-block;
+  height: 130px;
+  width: 130px;
+  margin-top: -50px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.our-team .picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transition: transform 0.9s ease;
+}
+
+/* Profile Picture Hover Animation */
+.our-team:hover .picture img {
+  transform: scale(0.7);
+  box-shadow: 0 0 0 14px #f7f5ec;
+}
+
+.our-team .picture::before {
+  content: "";
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  background-color: #1369ce;
+  position: absolute;
+  bottom: 135%;
+  right: 0;
+  left: 0;
+  opacity: 0.9;
+  transform: scale(3);
+  transition: all 0.3s linear;
+}
+
+.our-team:hover .picture::before {
+  height: 100%;
+}
+
+/* Follow Button */
+.our-team .picture button {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 20px;
+  transition: bottom 0.3s ease;
+}
+
+/* Hover Effect for Button */
+.our-team:hover .picture button {
+  bottom: 10px;
+}
+
+/* Team Content */
+.our-team .team-content {
+  margin-top: 20px;
+}
+
+.our-team .team-content .name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.our-team .team-content .title {
+  font-size: 15px;
+  color: #4e5052;
+  text-transform: capitalize;
+}
+
+/* Social Section */
+.our-team .social {
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  background-color: #1369ce;
+  color: white;
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  transition: bottom 0.5s ease;
+  text-align: center;
+}
+
+/* Social Section Hover Effect */
+.our-team:hover .social {
+  bottom: 0;
+}
+
+.our-team .social p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.our-team .social p b {
+  font-weight: bold;
+}
+
+/* Animated Border */
+.animatedBorder {
+  border: 5px solid coral;
+  animation: borderAnimation 5s infinite;
+}
+
+@keyframes borderAnimation {
+  0%, 100% {
+    border-color: coral;
+  }
+  50% {
+    border-color: lightblue;
+  }
+}
+
+
+
+
+  /* FOR THE HEX SHAPE */
+
+.hex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.hex {
+  width: 300px;
+  height: 300px;
+  background-color: #333;
+  clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.hex:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hex-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.2);
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+
+
+
+/* FOR THE FULL SCREEN VIEW  */
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
